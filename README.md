@@ -1,6 +1,6 @@
 ###Описание 
 
-####Запуск приложения
+#### Запуск приложения
 * Приложение запускается так:
 ```
 docker-compose build
@@ -11,7 +11,7 @@ docker-compose up
 127.0.0.1:8000
 ```
 
-####Аутентификация
+#### Аутентификация
   Приложение использует [Basic Authentication](https://en.wikipedia.org/wiki/Basic_access_authentication). Пользователи 
   аутентифицируются при помощи HTTP заголовка Authorization.
 
