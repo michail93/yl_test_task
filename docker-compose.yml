@@ -1,0 +1,29 @@
+version: '3'
+
+services:
+
+  postgres:
+    image: postgres
+    ports:
+      - "5432:5432"
+
+  redis:
+    image: redis:2.8.23
+    ports:
+      - "6379:6379"
+
+  worker:
+    build: .
+    command: bash run_celery.sh
+
+  app:
+    build: .
+    command: bash run_app.sh
+    volumes:
+      - .:/code
+    ports:
+      - "8000:8000"
+    depends_on:
+      - postgres
+      - redis
+      - worker

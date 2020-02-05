@@ -1,0 +1,7 @@
+django
+djangorestframework
+celery
+psycopg2
+psycopg2-binary==2.8.4
+redis
+requests
